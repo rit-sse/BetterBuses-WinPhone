@@ -6,39 +6,52 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="clr-namespace:BetterBuses.ViewModel.Common;assembly=BetterBuses.ViewModel.Common"
     mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/MainPageSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
+    
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="routesHeaderTemplate">
+            <Grid Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Routes"
+                            Style="{StaticResource PanoramaItemHeaderTextStyle}"
+                            Grid.Row="0"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="routesItemTemplate">
+            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                <!--Replace rectangle with image-->
+                <Image Source="{Binding Path=IconPath}"></Image>
+                <StackPanel Width="311" Margin="8,-7,0,0">
+                    <TextBlock Text="{Binding Path=Name}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <phone:Panorama Title="Better Buses">
-
+        <phone:Panorama Title="Better Buses" Background="{Binding Path=BackgroundImagePath, Converter={StaticResource ImagePathConverter}}">
             <phone:PanoramaItem Header="Destinations">
-                <Grid/>
+                <Grid />
             </phone:PanoramaItem>
 
-            <phone:PanoramaItem Header="Routes">
-                <phone:LongListSelector ItemsSource="{Binding Path=Routes}">
-                    <phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Image Width="40px" Height="40px" Source="{Binding Path=IconPath}"></Image>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Path=Name}"></TextBlock>
-                                    <TextBlock>
-                                        <Run>Next Bus: </Run>
-                                        <Run Text="{Binding Path=Time}"></Run>
-                                    </TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
+            <phone:PanoramaItem>
+                <StackPanel Orientation="Vertical">
+                    <phone:LongListSelector Margin="0,-38,-22,2"
+                                            ItemsSource="{Binding Routes}"
+                                            ListHeaderTemplate="{StaticResource routesHeaderTemplate}"
+                                            ItemTemplate="{StaticResource routesItemTemplate}">
+                    </phone:LongListSelector>
+                </StackPanel>
             </phone:PanoramaItem>
 
             <phone:PanoramaItem Header="History">

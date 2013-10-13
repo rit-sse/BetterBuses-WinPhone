@@ -18,6 +18,19 @@ namespace BetterBuses.ViewModel.WinPhone
         #region Properties
 
         /// <summary>
+        /// Uri for the image which appears in the background.
+        /// </summary>
+        public String BackgroundImagePath
+        {
+            get { return _backgroundImagePath; }
+            set
+            {
+                _backgroundImagePath = value;
+                OnPropertyChanged("BackgroundImagePath");
+            }
+        }
+
+        /// <summary>
         /// ViewModels for the route controls.
         /// </summary>
         public ObservableCollection<RouteListItemViewModel> Routes
@@ -35,31 +48,16 @@ namespace BetterBuses.ViewModel.WinPhone
         public MainPageViewModel()
         {
             _routes = new ObservableCollection<RouteListItemViewModel>();
-
-            //if (DesignerProperties.IsInDesignTool)
-            //{
-                for (int i = 0; i < 3; i++)
-                {
-                    // Fake a route.
-                    Route route = new Route
-                    {
-                        Name = "Night Shuttle",
-                        IconPath = new Uri(@"http://www.placekitten.com/40/40")
-                    };
-
-                    // Create view models.
-                    RouteListItemViewModel viewModel = new RouteListItemViewModel(route);
-                    _routes.Add(viewModel);
-                }
-            //}
         }
 
         #endregion
 
         #region Internal State
 
+        private String _backgroundImagePath;
         private readonly ObservableCollection<RouteListItemViewModel> _routes;
 
         #endregion
+    
     }
 }

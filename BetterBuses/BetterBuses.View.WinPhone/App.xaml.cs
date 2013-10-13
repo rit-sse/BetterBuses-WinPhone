@@ -53,7 +53,15 @@ namespace BetterBuses.View.WinPhone
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+        }
 
+        /// <summary>
+        /// Main method.
+        /// </summary>
+        /// <param name="args">Command line args. Not relevent to a WinPhone app.</param>
+        public static void Main(String[] args)
+        {
+            
         }
 
         // Code to execute when the application is launching (eg, from Start)

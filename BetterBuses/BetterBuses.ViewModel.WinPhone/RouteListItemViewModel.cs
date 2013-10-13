@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace BetterBuses.ViewModel.WinPhone
     /// </summary>
     public class RouteListItemViewModel : ViewModelBase
     {
+
         #region Properties
 
         /// <summary>
@@ -48,6 +50,13 @@ namespace BetterBuses.ViewModel.WinPhone
         /// <summary>
         /// Constructor.
         /// </summary>
+        public RouteListItemViewModel()
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         /// <param name="route">The route that this view model will present.</param>
         public RouteListItemViewModel(Route route)
         {
@@ -60,7 +69,7 @@ namespace BetterBuses.ViewModel.WinPhone
 
         #region Internal State
 
-        private Route _route;
+        private readonly Route _route;
         private String _name;
         private Uri _iconPath;
 
