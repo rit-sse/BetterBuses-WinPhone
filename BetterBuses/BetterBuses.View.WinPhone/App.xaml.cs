@@ -38,7 +38,7 @@ namespace BetterBuses.View.WinPhone
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                //Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
@@ -53,15 +53,6 @@ namespace BetterBuses.View.WinPhone
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-        }
-
-        /// <summary>
-        /// Main method.
-        /// </summary>
-        /// <param name="args">Command line args. Not relevent to a WinPhone app.</param>
-        public static void Main(String[] args)
-        {
-            
         }
 
         // Code to execute when the application is launching (eg, from Start)

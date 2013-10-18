@@ -20,7 +20,7 @@ namespace BetterBuses.ViewModel.WinPhone
         /// <summary>
         /// Uri for the image which appears in the background.
         /// </summary>
-        public String BackgroundImagePath
+        public Uri BackgroundImagePath
         {
             get { return _backgroundImagePath; }
             set
@@ -38,6 +38,11 @@ namespace BetterBuses.ViewModel.WinPhone
             get { return _routes; }
         }
 
+        public ObservableCollection<DestinationListItemViewModel> Destinations
+        {
+            get { return _destinations; }
+        }
+
         #endregion
 
         #region Constructors
@@ -48,16 +53,18 @@ namespace BetterBuses.ViewModel.WinPhone
         public MainPageViewModel()
         {
             _routes = new ObservableCollection<RouteListItemViewModel>();
+            _destinations = new ObservableCollection<DestinationListItemViewModel>();
         }
 
         #endregion
 
         #region Internal State
 
-        private String _backgroundImagePath;
+        private Uri _backgroundImagePath;
         private readonly ObservableCollection<RouteListItemViewModel> _routes;
+        private readonly ObservableCollection<DestinationListItemViewModel> _destinations;
 
         #endregion
-    
+
     }
 }

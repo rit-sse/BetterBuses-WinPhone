@@ -2,8 +2,15 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vm="clr-namespace:BetterBuses.ViewModel.WinPhone;assembly=BetterBuses.ViewModel.WinPhone"
-    BackgroundImagePath="Assets/Backgrounds/MainPage/bus_stop_background_dark.png">
+    xmlns:m="clr-namespace:BetterBuses.Model.Common;assembly=BetterBuses.Model.Common">
+    <vm:MainPageViewModel.BackgroundImagePath>/Assets/Backgrounds/MainPage/bus_stop_background.png</vm:MainPageViewModel.BackgroundImagePath>
+    <!--<vm:MainPageViewModel.BackgroundImagePath>http://www.placekitten.com/1280/720</vm:MainPageViewModel.BackgroundImagePath>-->
 
+    <vm:MainPageViewModel.Destinations>
+        <vm:DestinationListItemViewModel Name="Colony Manor" IconPath="http://www.placekitten.com/60/60">
+        </vm:DestinationListItemViewModel>
+    </vm:MainPageViewModel.Destinations>
+    
     <vm:MainPageViewModel.Routes>
         <vm:RouteListItemViewModel Name="Night Shuttle" IconPath="http://www.placekitten.com/60/60"/>
         <vm:RouteListItemViewModel Name="Drunk Bus" IconPath="http://www.placekitten.com/60/60"/>
