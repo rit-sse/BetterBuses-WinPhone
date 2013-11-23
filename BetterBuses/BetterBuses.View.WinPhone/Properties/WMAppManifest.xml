@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{43194011-193b-4a66-b9d8-238ca86a0676}" Title="BetterBuses" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BetterBuses.View.WinPhone author" Description="A better bus app for the RIT bus system." Publisher="BetterBuses.View.WinPhone" PublisherID="{5f2dbbbe-2cbe-4b5d-87f0-3a5bec2ff06b}">
+  <App xmlns="" ProductID="{17b3dc2e-4e82-4e4d-a032-23d4fec9387f}" Title="BetterBuses" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Morgan Cabral" Description="A better bus app for the RIT bus system." Publisher="Society of Software Engineers @ RIT" PublisherID="{d5715a42-1969-43d6-9f4e-4fc33803d296}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -12,7 +12,7 @@
       <Capability Name="ID_CAP_LOCATION" />
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <DefaultTask Name="_default" NavigationPage="TempMainPage.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="BetterBuses.View.WinPhoneToken" TaskName="_default">
@@ -20,13 +20,19 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>BetterBuses.View.WinPhone</Title>
+          <Title>BetterBuses</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
+          <LargeBackgroundImageURI>
+          </LargeBackgroundImageURI>
+          <LargeBackContent>
+          </LargeBackContent>
+          <LargeBackBackgroundImageURI>
+          </LargeBackBackgroundImageURI>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
           <HasLarge>

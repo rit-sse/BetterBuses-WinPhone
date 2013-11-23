@@ -1,0 +1,9 @@
+Features
+- Get directions to a destination...
+	- ...based on the closest bus stop
+	- ...starting at a specific bus stop
+	- ...based on the next departure time
+	- ...at a specific departure timeAdd 
+- Add a bus stop to the favorites list
+- Remove a bus stop from the favorites list
+- View a bus schedule

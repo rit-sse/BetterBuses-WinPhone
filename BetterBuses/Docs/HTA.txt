@@ -1,0 +1,55 @@
+===
+0. Get directions to a destination.
+	1. Navigate to the main page.
+	2. Search for a bus route.
+		2.1. Select a destination.
+			2.1.1. Select a favorite destination.
+			2.1.2. Select a specific destination.
+		2.2. Select a specific bus stop to start at.
+		2.3. Select a departure time.
+			2.3.1. Select the soonest departure.
+			2.3.2. Select a specific departure time.
+	3. Select a bus route.
+
+Plan 0: Perform steps 1-2 in that order. If a matching route is available,
+		do step 3.
+Plan 2: Perform steps 2.1-2.2-2.3 in any order.
+Plan 2.1: Do 2.1.1 if a favorite desination is desired. Do 2.1.2
+		  if a specific destination is desired.
+Plan 2.3: Do 2.3.1 if the next available bus that starts at the selected 
+		  starting bus stop is desired. Do 2.3.2 if a specific departure
+		  time is desired 
+
+===
+0. Favorite or unfavorite a destination.
+	1. Navigate to the main page.
+	2. Select a destination.
+	3. Open the App Bar.
+	4. Toggle favorite status.
+		3.1 Favorite the destination.
+		3.2 Unfavorite the destination.
+
+Plan 0: Perform steps 1-2-3-4 in that order.
+Plan 4: Do 4.1 if the destination is to be favorited. Do 4.2 if the
+		destination is to be unfavorited.
+
+===
+0. View a bus schedule
+	1. Navigate to the main page.
+	2. Select a bus schedule.
+	3. Select a day.
+
+Plan 0: Perform 1-2-3 in that order.
+
+===
+0. Search for a destination
+	1. Open the App Bar
+	2. Select the Search button
+	3. Type the name of the destination
+	4. Display a list of result
+		4.1 Display the results.
+		4.2 Display a "no results" page
+
+Plan 0: Perform steps 1-2-3-4.
+Plan 4: Do 4.1 if the query returned at least one result. Do 4.2 if no results
+		were returned.
